@@ -1,18 +1,11 @@
-Python 3.8.1 (tags/v3.8.1:1b293b6, Dec 18 2019, 23:11:46) [MSC v.1916 64 bit (AMD64)] on win32
-Type "help", "copyright", "credits" or "license()" for more information.
->>> 
-======================================= RESTART: C:/Users/DEEKSHA D SALVANKAR/AppData/Local/Programs/Python/Python38/cheacker.py ======================================
-Traceback (most recent call last):
-  File "C:/Users/DEEKSHA D SALVANKAR/AppData/Local/Programs/Python/Python38/cheacker.py", line 4, in <module>
-    for i in range(62.5,500,62.5*2):
-TypeError: 'float' object cannot be interpreted as an integer
->>> 
-======================================= RESTART: C:/Users/DEEKSHA D SALVANKAR/AppData/Local/Programs/Python/Python38/cheacker.py ======================================
-Traceback (most recent call last):
-  File "C:/Users/DEEKSHA D SALVANKAR/AppData/Local/Programs/Python/Python38/cheacker.py", line 4, in <module>
-    for i in range(80.5,640,80.5*2):
-TypeError: 'float' object cannot be interpreted as an integer
->>> 
-======================================= RESTART: C:/Users/DEEKSHA D SALVANKAR/AppData/Local/Programs/Python/Python38/cheacker.py ======================================
+import numpy as np
+import cv2
+b = np.ones([480,480],dtype='uint8')*255
+for i in range(60,480,60*2):
+        for jin range(60,480,60*2):
 
-======================================= RESTART: C:/Users/DEEKSHA D SALVANKAR/AppData/Local/Programs/Python/Python38/cheacker.py ======================================
+           b[j-60:j,i-60:i] = 0
+           b[j:j+60,i:i+60] = 0
+cv2.imshow(' checkerboard 8 square',b)
+cv2.waitKey(0)
+cv2.destroyAllWindows() 
